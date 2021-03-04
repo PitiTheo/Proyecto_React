@@ -1,38 +1,45 @@
 import React from "react";
 
-//import your own components
 import { Navbar } from "./component/navbar.js";
 import { Jumbotron } from "./component/jumbotron.js";
 import { Cards } from "./component/cards.js";
-import { Footer } from "./component/footer.js";
+import { Footer } from "./component/footer";
 
-const carta={
-    image:"/workspace/react-hello/src/img/rigo-baby.jpg ", 
-    alt:"Rigo", 
-    tittle:"Hola Rigo", 
-    description:" Esto es una prueba de Rigo ",
-    url:"https://www.w3schools.com/", 
-    button:"click here"};
-
+const carta = {
+	image: "http://placehold.it/500x325.jpg",
+	alt: "rigo",
+	title: "Hello Rigo",
+	description: "Prueba de rigo",
+	url: "http://wikipedia.com",
+	button: "click here"
+};
 //create layout (esqueleto)
 
 export function App() {
-	return <div className="text-center mt-5">
-        <Navbar  />
+	return (
+		<div className="text-center">
+			<Navbar />
 
-        <div className="container">
+			<div className="container">
+				<Jumbotron />
 
-            <Jumbotron  />
-            < Cards card ={carta}  />
+				<div className="row">
+					<div className="col">
+						<Cards card={carta} />
+					</div>
+					<div className="col">
+						<Cards card={carta} />
+					</div>
+					<div className="col">
+						<Cards card={carta} />
+					</div>
+					<div className="col">
+						<Cards card={carta} />
+					</div>
+				</div>
+			</div>
 
-
-
-
-        </div>
-        
-
-
-
-
-    </div>;
+			<Footer />
+		</div>
+	);
 }
