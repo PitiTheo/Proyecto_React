@@ -6,7 +6,8 @@ import { Cards } from "./component/cards.js";
 import { Footer } from "./component/footer";
 
 const carta = {
-	image: "http://placehold.it/500x325.jpg",
+	image:
+		"https://a.storyblok.com/f/89778/1168x728/b7082a9dd9/cr_00_00_2.jpeg",
 	alt: "rigo",
 	title: "Hello Rigo",
 	description: "Prueba de rigo",
